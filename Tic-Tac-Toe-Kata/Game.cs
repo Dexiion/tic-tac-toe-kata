@@ -2,7 +2,7 @@
 
 public class Game
 {
-    public string CurrentPlayer;
+    public string CurrentPlayer { get; set; }
     
     public Game(string firstPlayer)
     {
@@ -16,6 +16,11 @@ public class Game
 
     public void PlayNextTurn(int x, int y)
     {
-        throw new System.NotImplementedException();
+        CurrentPlayer = GetNextPlayerToPlay();
+    }
+
+    private string GetNextPlayerToPlay()
+    {
+        return CurrentPlayer.Equals("X") ? "O" :  "X";
     }
 }
