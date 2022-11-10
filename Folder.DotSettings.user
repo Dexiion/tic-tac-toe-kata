@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a005de9b_002Dc359_002D4564_002D9f41_002Dd530c6f4dea0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TrowExceptionIfPlayerTwoStartsPlaying #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C6C70F07-7F71-98EE-BB9F-6B514AF79128::net6.0::Tic_Tac_Toe_Kata.Tests.Tests.TrowExceptionIfPlayerTwoStartsPlaying&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C6C70F07-7F71-98EE-BB9F-6B514AF79128::net6.0::Tic_Tac_Toe_Kata.Tests.Tests.ShouldChangePlayers&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=af94f0cc_002D4957_002D4294_002D941a_002Da43a10ba14a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TrowExceptionIfPlayerTwoStartsPlaying" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C6C70F07-7F71-98EE-BB9F-6B514AF79128::net6.0::Tic_Tac_Toe_Kata.Tests.Tests.TrowExceptionIfPlayerTwoStartsPlaying&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
