@@ -8,8 +8,25 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void TrowExceptionIfPlayerTwoStartsPlaying()
     {
-        Assert.Pass();
+        Assert.Throws<PlayerNotAllowedToStartException>(() => { _ = new Game("O"); });
     }
 }
+
+public class Game
+{
+    private string CurrentPlayer;
+    
+    public Game(string firstPlayer)
+    {
+        CurrentPlayer = firstPlayer;
+    }
+
+}
+
+public class PlayerNotAllowedToStartException : Exception
+{
+    public PlayerNotAllowedToStartException(string message) : base(message) {}
+}
+
