@@ -28,4 +28,15 @@ public class Tests
 
         Game.CurrentPlayer.Should().Be("O");
     }
+    
+    [Test]
+    public void ShouldThrowAnExceptionIfFieldIsAlreadyTaken()
+    {
+        const int x = 0;
+        const int y = 0;
+        
+        Game.PlayNextTurn(x, y);
+        
+        Assert.Throws<FieldAlreadyTakenException>(() => { Game.PlayNextTurn(x, y); });
+    }
 }
