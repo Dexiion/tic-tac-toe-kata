@@ -9,13 +9,13 @@ public class Tests
     [SetUp]
     public void Setup()
     {
-        Game = new Game("X");
+        Game = new Game("X", new Board());
     }
 
     [Test]
     public void TrowExceptionIfPlayerTwoStartsPlaying()
     {
-        Assert.Throws<PlayerNotAllowedToStartException>(() => { _ = new Game("O"); });
+        Assert.Throws<PlayerNotAllowedToStartException>(() => { _ = new Game("O", new Board()); });
     }
     
     [Test]
