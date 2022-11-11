@@ -27,4 +27,9 @@ public class Game
     {
         return CurrentPlayer.Equals("X") ? "O" :  "X";
     }
+
+    public string GetWinner()
+    {
+        throw new System.NotImplementedException();
+    }
 }

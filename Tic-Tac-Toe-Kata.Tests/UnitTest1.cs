@@ -39,4 +39,19 @@ public class Tests
         
         Assert.Throws<FieldAlreadyTakenException>(() => { Game.PlayNextTurn(x, y); });
     }
+    
+    [Test]
+    public void ShouldWinWithThreeXInTopRow()
+    {
+        const int x = 0;
+        const int y = 0;
+        
+        Game.PlayNextTurn(x, y);
+        Game.PlayNextTurn(2, 0);
+        Game.PlayNextTurn(0, 1);
+        Game.PlayNextTurn(2, 2);
+        Game.PlayNextTurn(0, 2);
+
+        Game.GetWinner().Should().Be("X");
+    }
 }
