@@ -48,6 +48,11 @@ public class Game
                 return "X";
             }
             
+            if (Board.ColumnIsNotEmpty(N) && Board.ColumnIsFilledWith(N, "O"))
+            {
+                return "O";
+            }
+            
         }
         return "There is NO WINNER";
     }
