@@ -31,17 +31,23 @@ public class Game
 
     public string GetWinner()
     {
-        for (int row = 0; row < 3; row++)
+        for (int N = 0; N < 3; N++)
         {
-            if (Board.RowIsNotEmpty(row) && Board.RowIsFilledWith(row, "X"))
+            if (Board.RowIsNotEmpty(N) && Board.RowIsFilledWith(N, "X"))
             {
                 return "X";
             }
             
-            if (Board.RowIsNotEmpty(row) && Board.RowIsFilledWith(row, "O"))
+            if (Board.RowIsNotEmpty(N) && Board.RowIsFilledWith(N, "O"))
             {
                 return "O";
-            } 
+            }
+
+            if (Board.ColumnIsNotEmpty(N) && Board.ColumnIsFilledWith(N, "X"))
+            {
+                return "X";
+            }
+            
         }
         return "There is NO WINNER";
     }

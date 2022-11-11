@@ -35,4 +35,14 @@ public class Board
     {
         return Matrix[row, 0].Equals(player) && Matrix[row, 1].Equals(player) && Matrix[row, 2].Equals(player);
     }
+
+    public bool ColumnIsFilledWith(int column, string player)
+    {
+        return Matrix[0, column].Equals(player) && Matrix[1, column].Equals(player) && Matrix[2, column].Equals(player);
+    }
+
+    public bool ColumnIsNotEmpty(int column)
+    {
+        return !Matrix[0, column].Equals("-") && !Matrix[1, column].Equals("-") && !Matrix[2, column].Equals("-");
+    }
 }
