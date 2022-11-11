@@ -70,4 +70,19 @@ public class Tests
 
         Game.GetWinner().Should().Be("O");
     }
+    
+    [Test]
+    public void ShouldWinWithThreeXInMiddleRow()
+    {
+        const int x = 1;
+        const int y = 0;
+        
+        Game.PlayNextTurn(x, y);
+        Game.PlayNextTurn(2, 0);
+        Game.PlayNextTurn(1, 1);
+        Game.PlayNextTurn(2, 2);
+        Game.PlayNextTurn(1, 2);
+
+        Game.GetWinner().Should().Be("X");
+    }
 }
