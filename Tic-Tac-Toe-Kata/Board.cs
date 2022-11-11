@@ -45,4 +45,14 @@ public class Board
     {
         return !Matrix[0, column].Equals("-") && !Matrix[1, column].Equals("-") && !Matrix[2, column].Equals("-");
     }
+
+    public bool RightDiagonalIsNotEmpty()
+    {
+        return !Matrix[0, 0].Equals("-") && !Matrix[1, 1].Equals("-") && !Matrix[2, 2].Equals("-");
+    }
+
+    public bool RightDiagonalIsFilledWith(string player)
+    {
+        return Matrix[0, 0].Equals(player) && Matrix[1, 1].Equals(player) && Matrix[2, 2].Equals(player);
+    }
 }

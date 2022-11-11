@@ -54,6 +54,12 @@ public class Game
             }
             
         }
+
+        if (Board.RightDiagonalIsNotEmpty() && Board.RightDiagonalIsFilledWith("X"))
+        {
+            return "X";
+        }
+        
         return "There is NO WINNER";
     }
 }
