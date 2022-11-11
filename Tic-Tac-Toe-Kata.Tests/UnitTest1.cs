@@ -101,7 +101,7 @@ public class Tests
         Game.GetWinner().Should().Be("X");
     }
     
-        [Test]
+    [Test]
     public void ShouldWinWithThreeXInLeftColumn()
     {
         const int x = 0;
