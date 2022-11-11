@@ -55,4 +55,14 @@ public class Board
     {
         return Matrix[0, 0].Equals(player) && Matrix[1, 1].Equals(player) && Matrix[2, 2].Equals(player);
     }
+
+    public bool LeftDiagonalIsNotEmpty()
+    {
+        return !Matrix[0, 2].Equals("-") && !Matrix[1, 1].Equals("-") && !Matrix[2, 0].Equals("-");
+    }
+    
+    public bool LeftDiagonalIsFilledWith(string player)
+    {
+        return Matrix[0, 2].Equals(player) && Matrix[1, 1].Equals(player) && Matrix[2, 0].Equals(player);
+    }
 }
