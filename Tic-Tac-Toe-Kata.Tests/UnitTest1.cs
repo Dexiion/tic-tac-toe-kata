@@ -54,4 +54,20 @@ public class Tests
 
         Game.GetWinner().Should().Be("X");
     }
+    
+    [Test]
+    public void ShouldWinWithThreeOInTopRow()
+    {
+        const int x = 2;
+        const int y = 0;
+        
+        Game.PlayNextTurn(x, y);
+        Game.PlayNextTurn(0, 0);
+        Game.PlayNextTurn(1, 1);
+        Game.PlayNextTurn(0, 1);
+        Game.PlayNextTurn(2, 2);
+        Game.PlayNextTurn(0, 2);
+
+        Game.GetWinner().Should().Be("O");
+    }
 }
