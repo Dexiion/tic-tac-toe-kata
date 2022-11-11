@@ -146,4 +146,19 @@ public class Tests
 
         Game.GetWinner().Should().Be("X");
     }
+    
+    [Test]
+    public void ShouldWinWithThreeXInRightColumn()
+    {
+        const int x = 0;
+        const int y = 2;
+        
+        Game.PlayNextTurn(x, y);
+        Game.PlayNextTurn(0, 1);
+        Game.PlayNextTurn(1, 2);
+        Game.PlayNextTurn(1, 1);
+        Game.PlayNextTurn(2, 2);
+
+        Game.GetWinner().Should().Be("X");
+    }
 }
