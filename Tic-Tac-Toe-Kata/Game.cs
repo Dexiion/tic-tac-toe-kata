@@ -70,6 +70,11 @@ public class Game
             return "X";
         }
         
+        if (Board.LeftDiagonalIsNotEmpty() && Board.LeftDiagonalIsFilledWith("O"))
+        {
+            return "O";
+        }
+        
         return "There is NO WINNER";
     }
 }

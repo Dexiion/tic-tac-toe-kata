@@ -221,6 +221,6 @@ public class Tests
         Game.PlayNextTurn(2, 1);
         Game.PlayNextTurn(2, 0);
 
-        Game.GetWinner().Should().Be("X");
+        Game.GetWinner().Should().Be("O");
     }
 }
