@@ -192,4 +192,19 @@ public class Tests
 
         Game.GetWinner().Should().Be("O");
     }
+    
+    [Test]
+    public void ShouldWinWithThreeXInLeftDiagonal()
+    {
+        const int x = 0;
+        const int y = 2;
+        
+        Game.PlayNextTurn(x, y);
+        Game.PlayNextTurn(0, 1);
+        Game.PlayNextTurn(1, 1);
+        Game.PlayNextTurn(1, 2);
+        Game.PlayNextTurn(2, 0);
+
+        Game.GetWinner().Should().Be("X");
+    }
 }
