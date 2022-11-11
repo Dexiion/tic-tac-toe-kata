@@ -25,4 +25,14 @@ public class Board
     {
         return Matrix[x, y] != "-";
     }
+
+    public bool RowIsNotEmpty(int row)
+    {
+        return !Matrix[row, 0].Equals("-") && !Matrix[row, 1].Equals("-") && !Matrix[row, 2].Equals("-");
+    }
+
+    public bool RowIsFilledWith(int row, string player)
+    {
+        return Matrix[row, 0].Equals(player) && Matrix[row, 1].Equals(player) && Matrix[row, 2].Equals(player);
+    }
 }

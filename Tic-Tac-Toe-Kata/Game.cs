@@ -1,4 +1,6 @@
-﻿namespace Tic;
+﻿using System;
+
+namespace Tic;
 
 public class Game
 {
@@ -18,9 +20,8 @@ public class Game
 
     public void PlayNextTurn(int x, int y)
     {
-        CurrentPlayer = GetNextPlayerToPlay();
         Board.SetTileAt(x, y, CurrentPlayer);
-
+        CurrentPlayer = GetNextPlayerToPlay();
     }
 
     private string GetNextPlayerToPlay()
@@ -30,6 +31,13 @@ public class Game
 
     public string GetWinner()
     {
-        throw new System.NotImplementedException();
+        for (int row = 0; row < 3; row++)
+        {
+            if (Board.RowIsNotEmpty(row) && Board.RowIsFilledWith(row, "X"))
+            {
+                return "X";
+            }   
+        }
+        return "There is NO WINNER";
     }
 }
