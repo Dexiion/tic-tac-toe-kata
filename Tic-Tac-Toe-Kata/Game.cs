@@ -36,7 +36,12 @@ public class Game
             if (Board.RowIsNotEmpty(row) && Board.RowIsFilledWith(row, "X"))
             {
                 return "X";
-            }   
+            }
+            
+            if (Board.RowIsNotEmpty(row) && Board.RowIsFilledWith(row, "O"))
+            {
+                return "O";
+            } 
         }
         return "There is NO WINNER";
     }
