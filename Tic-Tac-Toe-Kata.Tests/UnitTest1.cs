@@ -180,16 +180,16 @@ public class Tests
     [Test]
     public void ShouldWinWithThreeOInRightDiagonal()
     {
-        const int x = 1;
-        const int y = 0;
+        const int x = 0;
+        const int y = 1;
         
         Game.PlayNextTurn(x, y);
         Game.PlayNextTurn(0, 0);
-        Game.PlayNextTurn(1, 2);
+        Game.PlayNextTurn(1, 0);
         Game.PlayNextTurn(1, 1);
         Game.PlayNextTurn(2, 1);
         Game.PlayNextTurn(2, 2);
 
-        Game.GetWinner().Should().Be("X");
+        Game.GetWinner().Should().Be("O");
     }
 }
